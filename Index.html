@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <script type="text/javascript" src="javascript/app.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <meta charset=utf-8 />
+</head>
+
+<body ng-controller="lotteryCtrl2">
+    <div id="header">
+        AngularJS Function
+    </div>
+
+    <div class="test">
+        <ul>
+            <li>DropDownlist
+                <select ng-model="Select" ng-options="lottery.ProductName for lottery in lotteryModel"></select>
+            </li>
+            <li>checkbox(Mulite)
+                <label ng-repeat="Name in lotteryModel">
+                <input type="checkbox" ng-checked="selection.indexOf(Name.ProuctName) > -1" ng-click="toggleSelection(Name.ProductName)" value="{{Name.ProductName}}">
+                    {{Name.ProductName}}</labe>
+            </li>
+            <li>RadioButton
+                <label ng-repeat="Name in lotteryModel">
+                    <input name="radio" type="radio" ng-click="radioSelection(Name.ProductName)" value="{{Name.ProductName}}">
+                    {{Name.ProductName}}
+                </label>
+            </li>
+            <li>
+                <input type="text" ng-model="inputext.text">
+            </li>
+        </ul>
+    </div>
+    <div id="select">
+        <p style="display:inline;">You have selected:</p>
+        <span>{{ Select.ProductName }}</span><br>
+        <span>{{selection}}</span><br>
+        <span>{{selection2}}</span><br>
+        <span>{{inputext.text}}</span>
+    </div>
+</body>
+
+</html>

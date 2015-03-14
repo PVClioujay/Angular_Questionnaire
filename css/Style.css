@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* CSS Document */
+@import 'Reset.css';
+
+#header {
+    background: #5383ff;
+    
+}
+p {
+    color: #ffc693;
+}
+li{
+	list-style: none;
+}
